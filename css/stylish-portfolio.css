@@ -154,13 +154,13 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 90%;
+    height: 92.5%;
     background: url(../img/c15.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    color:gray;
+    color:#cccccc;
 }
 
 .overlay {
