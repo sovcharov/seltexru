@@ -1,0 +1,154 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@charset "utf-8";
+
+.my-panel {
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: darkgray;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    width: 99.5%;
+    /*color:dimgrey;*/
+}
+
+.my-panel span {
+    padding: 2px;
+}
+
+.bakery :hover {
+    background-color:aliceblue;
+}
+
+.bakery-name {
+
+}
+
+.receipts-date {
+    font-weight: normal;
+}
+
+.bakery-data {
+    font-weight: normal;
+    color: gray;
+}
+
+.bakery-data-cash {
+    font-weight: normal;
+    color: cornflowerblue;
+}
+
+.currentDate {
+    color: gray;
+}
+
+.notCurrentDate {
+    color: red;
+}
+
+.plusButton {
+    height: 22px;
+    width: 22px;
+    font-weight: normal;
+}
+
+.my-login-formgroup {
+    margin: 0 auto;
+    width:380px;
+}
+
+.my-navbar {
+    border-radius: 0;
+}
+
+.my-today {
+    background-color: #96cde9;
+}
+
+.receipt-header {
+    border-bottom: 1px;
+}
+
+.my-row {
+    height: 56px;
+}
+
+/*Info Event start*/
+/*Copyright (c) 2015 Sergei Ovcharov*/
+.infoBoxMain{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	z-index:5;
+}
+.infoBox{
+	height:60px;
+	width:250px;
+	opacity: 0.7;
+	border-radius:5px;
+	margin:1px;
+	text-align:center;
+	vertical-align: middle;
+	font-family: Arial;
+	font-size:17px;
+	color:white;
+	line-height:40px;
+    /*z-index:5;*/
+}
+.infoBoxDanger{
+	background-color:#B20000;
+}
+.infoBoxSuccess{
+	background-color:#33804c;
+}
+.infoBoxComment{
+    font-size:12px;
+    line-height:10px;
+}
+/*Info Event end*/
+
+/*Spinning wheel start*/
+/*Copyright (c) 2014 Luke Haas*/
+.loader {
+    margin: 0px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 2px solid rgba(1, 1, 1, 0.2);
+    border-right: 2px solid rgba(1, 1, 1, 0.2);
+    border-bottom: 2px solid rgba(1, 1, 1, 0.2);
+    border-left: 2px solid #(1, 1, 1, 1);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 0.5s infinite linear;
+    animation: load8 0.5s infinite linear;
+}
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*Spinning wheel end*/
