@@ -40,7 +40,7 @@ h6 {
 /*    background-color: white;*/
 }
 
-.my-navbar-brand {
+.my-bavbar-brand {
     font-family:myFont;
     letter-spacing: -5px;
 }
@@ -86,10 +86,16 @@ h6 {
     color: #ffcc01;
 }
 
-
 .navbar-inverse .navbar-brand:hover {
     font-size: 48px;
     color: #ffcc01;
+}
+
+a.navbar-brand {
+/*
+    margin-top:0px;
+    line-height: 40px;
+*/
 }
 
 .navbar-space {
