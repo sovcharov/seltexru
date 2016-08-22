@@ -32,11 +32,11 @@
             </div>
 
             <!-- /.navbar-collapse -->
-            <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:">
+            <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:"  action="/catalog/index.php" method="get">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск в каталоге">
+                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part" value = "<?=$_GET["part"];?>">
                     <span class="input-group-btn">
-                        <button class="btn btn-warning my-search-button" type="button">Поиск</button>
+                        <button class="btn btn-warning my-search-button" type="submit">Поиск</button>
                     </span>
                 </div>
             </form>
@@ -54,70 +54,49 @@
     <div id="top" class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
-
-
     <div class="col-xs-12">
-        <div class="row my-panel">
+<?php
+    require ('getData.php');
+?>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <p class="text-muted">Найдено результатов: <?=sizeof($parts);?></p>
+                <hr class="small">
+            </div>
+        </div>
+    </div>
+
+<?php
+    foreach($parts as $value) {
+        echo '<div class="row my-panel">
             <div class="col-sm-12">
                 <span class="col-sm-12">
-                    Прокладки верхние                    Прокладки верхние
-                    Прокладки верхние
-                    Прокладки верхние
-                    Прокладки верхние
-
+                '.$value["description"].'
                 </span>
             </div>
             <div class="col-sm-6">
-                <span class="col-sm-12">Цена: <span class="bakery-data-cash">182000</span></span>
+                <span class="col-sm-12" style="font-size:18px;"><span class="" style="font-weight:bold; color: firebrick">
+                '.$value["price"].'
+                </span><i class="fa fa-rub fa-fw"></i></span>
+
             </div>
             <div class="col-sm-6">
-                <span class="col-xs-6" style="background-color:lightblue">На складе: <span class="bakery-data">&gt12</span></span>
-                <span class="col-xs-6" style="background-color:lightsalmon">В пути: <span class="bakery-data">3</span></span>
-            </div>
-        </div>
-        <hr>
-                <div class="row my-panel">
-            <div class="col-sm-12">
-                <span class="col-sm-12">
-                    Прокладки верхние                    Прокладки верхние
-                    Прокладки верхние
-                    Прокладки верхние
-                    Прокладки верхние
-
+                <span class="col-xs-6" style="">На складе:
+                '.$value["qty"].'
+                </span>
+                <span class="col-xs-6" style="">В пути:
+                '.$value["qtyOrdered"].'
                 </span>
             </div>
-            <div class="col-sm-6">
-                                <span class="col-sm-12" style="font-size:18px;">Цена: <span class="" style="font-weight:bold; color: firebrick">182000</span><i class="fa fa-rub fa-fw"></i></span>
-
-            </div>
-            <div class="col-sm-6">
-                <span class="col-xs-6" style="background-color:lightblue">На складе: <span class="bakery-data">&gt12</span></span>
-                <span class="col-xs-6" style="background-color:lightsalmon">В пути: <span class="bakery-data">3</span></span>
-            </div>
         </div>
-        <hr>
-                <div class="row my-panel">
-            <div class="col-sm-12">
-                <span class="col-sm-12">
-                    Прокладки верхние                    Прокладки верхние
-                    Прокладки верхние
-                    Прокладки верхние
-                    Прокладки верхние
-
-                </span>
-            </div>
-            <div class="col-sm-6">
-                <span class="col-sm-12" style="font-size:18px;">Цена: <span class="" style="font-weight:bold">182000</span></span>
-            </div>
-            <div class="col-sm-6">
-                <span class="col-xs-6" style="font-size:18px;background-color:lightblue;text-align:center;">На складе: <span class="bakery-data">&gt12</span></span>
-                <span class="col-xs-6" style="font-size:18px;background-color:lightsalmon;text-align:center;">В пути: <span class="bakery-data">3</span></span>
-            </div>
-        </div>
-        <hr>
+        <hr>';
+    }
+?>
     </div>
     <div class="navbar-space"></div>
-    <div class="navbar-space"></div>    <div class="navbar-space"></div>
+    <div class="navbar-space"></div>
+    <div class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
 
@@ -134,7 +113,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a href="http://seltex.ru/catalog/?part=%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D1%8B%D1%88+CAT" class="portfolio-link helper" data-toggle="modal">
+                    <a href="/catalog/index.php?part=%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D1%8B%D1%88+CAT" class="portfolio-link helper" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <span>Вкладыши</span>
@@ -144,7 +123,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="http://seltex.ru/catalog/?part=%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+CAT" class="portfolio-link" data-toggle="modal">
+                    <a href="/catalog/index.php?part=%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+CAT" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <span>Наборы прокладок</span>
@@ -154,7 +133,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="http://seltex.ru/catalog/?part=%D0%BA%D0%BE%D0%BB%D1%8C%D1%86+%D0%BF%D0%BE%D1%80%D1%88%D0%BD%D1%8F+CAT" class="portfolio-link" data-toggle="modal">
+                    <a href="/catalog/index.php?part=%D0%BA%D0%BE%D0%BB%D1%8C%D1%86+%D0%BF%D0%BE%D1%80%D1%88%D0%BD%D1%8F+CAT" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <span>Кольца поршня</span>
@@ -164,7 +143,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="http://seltex.ru/catalog/?part=%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA+CAT" class="portfolio-link" data-toggle="modal">
+                    <a href="/catalog/index.php?part=%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA+CAT" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <span>Датчики</span>
@@ -174,7 +153,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="http://seltex.ru/catalog/?part=%D0%9E%D1%85%D0%BB%D0%B0%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+CAT" class="portfolio-link" data-toggle="modal">
+                    <a href="/catalog/index.php?part=%D0%9E%D1%85%D0%BB%D0%B0%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+CAT" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <span>Охладители</span>
@@ -184,7 +163,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="http://seltex.ru/catalog/?part=%D0%BF%D0%BE%D0%BC%D0%BF%D0%B0+CAT" class="portfolio-link" data-toggle="modal">
+                    <a href="/catalog/index.php?part=%D0%BF%D0%BE%D0%BC%D0%BF%D0%B0+CAT" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <span>Помпы</span>
@@ -223,6 +202,9 @@
                         <li><i class="fa fa-phone fa-fw"></i>+7 812 959-13-57</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">sales@seltex.ru</a>
                         </li>
+                        <li><i class="fa fa-skype fa-fw"></i>pro-diesel</li>
+                        <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="18" height="18">
+                        <span> 456201946</span>
                     </ul>
                     <br>
 
