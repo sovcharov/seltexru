@@ -111,6 +111,21 @@ a.navbar-brand {
     text-shadow: 2px 2px #FF0000;
 }
 
+.my-panel {
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 7px;
+    border-color: darkgray;
+    margin: 0 auto;
+    margin-bottom: 2px;
+/*    width: 99.5%;*/
+}
+
+.my-panel span {
+    padding: 2px;
+}
+
 
 #portfolio .portfolio-item {
   margin: 0 0 15px;

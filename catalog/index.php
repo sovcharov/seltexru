@@ -71,26 +71,31 @@
     foreach($parts as $value) {
         echo '<div class="row my-panel">
             <div class="col-sm-12">
-                <span class="col-sm-12">
+                <span class="col-sm-12" style="font-size:;font-weight:bold; color:dimgray;">
                 '.$value["description"].'
                 </span>
             </div>
             <div class="col-sm-6">
                 <span class="col-sm-12" style="font-size:18px;"><span class="" style="font-weight:bold; color: firebrick">
                 '.$value["price"].'
-                </span><i class="fa fa-rub fa-fw"></i></span>
+                </span><i class="fa fa-rub fa-fw" style="font-size:12px;"></i></span>
 
             </div>
-            <div class="col-sm-6">
-                <span class="col-xs-6" style="">На складе:
-                '.$value["qty"].'
-                </span>
-                <span class="col-xs-6" style="">В пути:
-                '.$value["qtyOrdered"].'
-                </span>
+            <div class="col-sm-6">';
+                if($value["qty"]!="0") {
+                    echo '<span class="col-xs-6" style="background-color:#B8FFDB">На складе: <span style="color:;font-weight:bold">'.$value["qty"].'</span></span>';
+                } else {
+                    echo '<span class="col-xs-6" style="background-color:#FFD1B2">На складе: <span style="color:;font-weight:bold">'.$value["qty"].'</span></span>';
+                }
+                if($value["qtyOrdered"]!="0") {
+                    echo '<span class="col-xs-6" style="background-color:#B8FFDB">В пути: <span style="color:;font-weight:bold">'.$value["qtyOrdered"].'</span></span>';
+                } else {
+                    echo '<span class="col-xs-6" style="background-color:#FFD1B2">В пути: <span style="color:;font-weight:bold">'.$value["qtyOrdered"].'</span></span>';
+                }
+                echo '
+
             </div>
-        </div>
-        <hr>';
+        </div>';
     }
 ?>
     </div>
