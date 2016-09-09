@@ -1,5 +1,7 @@
 <?php
-            $dir = '../../seltexrudbconnect/';
+//            $dir = '../../seltexrudbconnect/';
+            $dir = '../../';
+
 			require ('../services/getcurrency.php');
 			$currency = getCurrency();
 //			require("../../log2.php");

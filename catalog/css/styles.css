@@ -35,12 +35,24 @@ h6 {
     src: url(../fonts/bitstreamverabd.ttf);
 }
 
+.top-bar {
+    position: fixed;
+    top: 0px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    z-index: 6;
+}
+
 .my-navbar {
+    top: 50px;
     border-radius: 0;
 /*    background-color: white;*/
 }
 
-.my-bavbar-brand {
+.my-navbar-brand {
     font-family:myFont;
     letter-spacing: -5px;
 }
@@ -86,20 +98,15 @@ h6 {
     color: #ffcc01;
 }
 
+
 .navbar-inverse .navbar-brand:hover {
     font-size: 48px;
     color: #ffcc01;
 }
 
-a.navbar-brand {
-/*
-    margin-top:0px;
-    line-height: 40px;
-*/
-}
-
 .navbar-space {
     height: 50px;
+/*    background-color: #222;*/
 }
 
 .text-in-service {
@@ -111,50 +118,41 @@ a.navbar-brand {
     text-shadow: 2px 2px #FF0000;
 }
 
-.my-panel {
-    padding: 5px;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 7px;
-    border-color: darkgray;
-    margin: 0 auto;
-    margin-bottom: 2px;
-/*    width: 99.5%;*/
-}
-
-.my-panel span {
-    padding: 2px;
+.list-unstyled >li {
+    font-size: 24px;
 }
 
 
 #portfolio .portfolio-item {
-  margin: 0 0 15px;
-  right: 0;
-
+  margin: 0 0 0px;
+/*  right: 0;*/
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
-  max-width: 400px;
+/*  max-width: 400px;*/
     max-height: 400px;
-  margin: 0 auto;
+/*  margin: 0 auto;*/
     text-align: center;
     white-space: nowrap;
         border-width: 1px;
     border-color: gray;
 /*    border-style: solid;*/
+/*    border-radius: 5px;*/
 
 }
 #portfolio .portfolio-item .portfolio-link .caption {
 /*  background: rgba(24, 188, 156, 0.9);*/
+/*    background-color: lightblue;*/
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+/*  opacity: 0.5;*/
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
 }
+
 #portfolio .portfolio-item .portfolio-link .caption:hover {
   opacity: 1;
     background: rgba(24, 188, 156, 0.9);
@@ -171,6 +169,7 @@ a.navbar-brand {
   top: 45%;
   margin-top: -12px;
   color: red;
+    text-shadow: 1px 1px black;
 }
 #portfolio .portfolio-item .portfolio-link .caption:hover  .caption-content{
     color: white;
@@ -188,9 +187,62 @@ a.navbar-brand {
 }
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
-    margin: 0 0 30px;
+    margin: 5px 0px 5px;
   }
 }
 
 
+/*search placeholder blinker*/
 
+
+
+.input-group .textbox::-webkit-input-placeholder {
+    color:blue;
+    font-weight: ;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+.input-group .textbox::-moz-placeholder {
+    color:blue;
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.my-panel {
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 7px;
+    border-color: darkgray;
+    margin: 0 auto;
+    margin-bottom: 2px;
+/*    width: 99.5%;*/
+}
+
+.my-panel span {
+    padding: 2px;
+}

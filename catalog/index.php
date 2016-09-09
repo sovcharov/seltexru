@@ -17,7 +17,10 @@
 </head>
 
 <body>
-
+    <div class="top-bar">
+        <div class="col-xs-6" style=""><img src="img/seltexLogoTranspYellow.png" width="220" height= "48" class="" alt="Seltex"></div>
+         <div class="col-xs-6" style=" line-height:50px; text-align:right; font-size:18px;"><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a></div>
+    </div>
     <nav class="navbar-inverse my-navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="col-sm-3 navbar-header">
@@ -58,7 +61,7 @@
 <?php
     require ('getData.php');
 ?>
-    <div class="container">
+    <div class="container" style="margin-top:30px;">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <p class="text-muted">Найдено результатов: <?=sizeof($parts);?></p>
@@ -182,7 +185,7 @@
     </section>
 
     <!-- Map -->
-    <section id="contact" class="map">
+    <section class="map">
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=59.761528,30.474268
         &center=59.761528,30.474268
         &zoom=11
@@ -195,7 +198,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -204,12 +207,14 @@
                     <p>Московское шоссе, 231 к. 5
                         <br>Санкт-Петербург, 196627</p>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i>+7 812 959-13-57</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">sales@seltex.ru</a>
+                        <li class = "contacts-list" style="font-weight:bold; color:darkred;"><i class="fa fa-phone fa-fw"></i>+7 812 959-13-57</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
                         </li>
                         <li><i class="fa fa-skype fa-fw"></i>pro-diesel</li>
-                        <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="18" height="18">
+                        <li>
+                        <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="24" height="24">
                         <span> 456201946</span>
+                        </li>
                     </ul>
                     <br>
 
