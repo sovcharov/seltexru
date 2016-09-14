@@ -18,13 +18,21 @@
 
 <body>
     <div class="top-bar">
-        <div class="col-xs-6" style=""><img src="img/seltexLogoTranspYellow.png" width="220" height= "48" class="" alt="Seltex"></div>
-         <div class="col-xs-6" style=" line-height:50px; text-align:right; font-size:18px;"><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a></div>
+        <div class="col-xs-5" style=""><img src="img/seltexLogoTranspYellow.png" width="220" height="48" class="" alt="Seltex"></div>
+        <div class="col-xs-3 hidden-xs" style=" line-height:50px; text-align:right; font-size:18px;">
+        <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
+        </div>
+        <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
+
+        </div>
+        <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;">
+        <!-- livezilla.net code --><script type="text/javascript" id="a847c8fe02838b858cac43e902dd4c0e" src="http://seltex.ru/livezilla/script.php?id=a847c8fe02838b858cac43e902dd4c0e"></script><!-- http://www.livezilla.net -->
+        </div>
     </div>
     <nav class="navbar-inverse my-navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="col-sm-3 navbar-header">
-                <a class="navbar-brand my-bavbar-brand" style="" href="#top">Seltex</a>
+                <span class="navbar-brand" style="width:240px; font-size:24px; font-family: Arial black;">(812) 959-13-57</span>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -35,9 +43,9 @@
             </div>
 
             <!-- /.navbar-collapse -->
-            <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:"  action="/catalog/index.php" method="get">
+            <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:" action="/catalog/index.php" method="get">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part" value = "<?=$_GET["part"];?>">
+                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part" value="<?=$_GET["part"]?>">
                     <span class="input-group-btn">
                         <button class="btn btn-warning my-search-button" type="submit">Поиск</button>
                     </span>
@@ -47,7 +55,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">На главную</a></li>
                     <li><a href="#groups">Группы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li style=""><a href="#contact" class="contact-button" style="color: #18BC9C;">Контакты</a></li>
                 </ul>
             </div>
         </div>
@@ -58,19 +66,21 @@
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="col-xs-12">
-<?php
+        <?php
     require ('getData.php');
 ?>
-    <div class="container" style="margin-top:30px;">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                <p class="text-muted">Найдено результатов: <?=sizeof($parts);?></p>
-                <hr class="small">
+            <div class="container" style="margin-top:30px;">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <p class="text-muted">Найдено результатов:
+                            <?=sizeof($parts);?>
+                        </p>
+                        <hr class="small">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-<?php
+            <?php
     foreach($parts as $value) {
         echo '<div class="row my-panel">
             <div class="col-sm-12">
@@ -207,13 +217,13 @@
                     <p>Московское шоссе, 231 к. 5
                         <br>Санкт-Петербург, 196627</p>
                     <ul class="list-unstyled">
-                        <li class = "contacts-list" style="font-weight:bold; color:darkred;"><i class="fa fa-phone fa-fw"></i>+7 812 959-13-57</li>
+                        <li class="contacts-list" style="font-weight:bold; color:darkred;"><i class="fa fa-phone fa-fw"></i>+7 812 959-13-57</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
                         </li>
                         <li><i class="fa fa-skype fa-fw"></i>pro-diesel</li>
                         <li>
-                        <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="24" height="24">
-                        <span> 456201946</span>
+                            <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="24" height="24">
+                            <span> 456201946</span>
                         </li>
                     </ul>
                     <br>
@@ -306,7 +316,19 @@
             // Enable map zooming with mouse scroll when the user clicks the map
         $('.map').on('click', onMapClickHandler);
     </script>
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/57d69c113bec6867d943a729/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 
 </html>
