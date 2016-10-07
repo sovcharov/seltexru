@@ -79,57 +79,6 @@ while ($row = mysqli_fetch_array($qresult)) {
 }
 
 require '../../dbclose.php';
-//THIS PART IS TO ADD INJECTORS TO MAIN CATALOG
-require '../../dbconnect.php';
-if (empty($_GET))
-{
-    $query="
-    SELECT p.ID as ProductID, p.Description AS ProductName, p.Price as ListPrice, p.Numbers AS CategoryName, p.stock as qty, p.ordered as qtyOrdered
-    from inventoryProDiesel as p
-    order by p.Description
-    ";
-}
-else
-{
-    $query = "SELECT p.ID as ProductID, p.Description AS ProductName, p.Price as ListPrice, p.Numbers AS CategoryName, p.stock as qty, p.ordered as qtyOrdered
-    FROM inventoryProDiesel AS p where " . $vv . "
-    order by p.Description
-    ";
-}
-$qresult = @mysqli_query($dbc, $query);
-while ($row = mysqli_fetch_array($qresult)) {
-    //$x = number_format(htmlspecialchars($row['ListPrice']),2);
-    $x = (int)((($row['ListPrice']))*$currency);
-    $x = (int)($x - $x%10);
-    $myArray[$xx]['description'] = ($row['ProductName']) . " ProDiesel";
-    $myArray[$xx]['price'] = $x;
-    if($row['qty']>12)
-    {
-        $myArray[$xx]['available'] = '> 12';
-    }
-    else if($row['qty']>6)
-    {
-        $myArray[$xx]['available'] = '> 6';
-    }
-    else
-    {
-        $myArray[$xx]['available']=$row['qty'];
-    }
-    if($row['qtyOrdered']>12)
-    {
-        $myArray[$xx]['coming'] = '> 12';
-    }
-    else if($row['qtyOrdered']>6)
-    {
-        $myArray[$xx]['coming'] = '> 6';
-    }
-    else
-    {
-        $myArray[$xx]['coming']=$row['qtyOrdered'];
-    }
-    $xx++;
-}
-require '../../dbclose.php';
 echo json_encode($myArray);
 
 ?>

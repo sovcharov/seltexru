@@ -23,7 +23,7 @@
         <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
         </div>
         <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
-
+       
         </div>
         <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;">
         <!-- livezilla.net code --><script type="text/javascript" id="a847c8fe02838b858cac43e902dd4c0e" src="http://seltex.ru/livezilla/script.php?id=a847c8fe02838b858cac43e902dd4c0e"></script><!-- http://www.livezilla.net -->
@@ -45,7 +45,7 @@
             <!-- /.navbar-collapse -->
             <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:" action="/catalog/index.php" method="get">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part" value="<?=$_GET["part"]?>">
+                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part" value="<?=$_GET["part"];?>">
                     <span class="input-group-btn">
                         <button class="btn btn-warning my-search-button" type="submit">Поиск</button>
                     </span>
@@ -329,6 +329,36 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter39588180 = new Ya.Metrika({
+                    id:39588180,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/39588180" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 </body>
 
 </html>

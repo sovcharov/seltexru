@@ -1,7 +1,6 @@
 <?php
 //            $dir = '../../seltexrudbconnect/';
             $dir = '../../';
-
 			require ('../services/getcurrency.php');
 			$currency = getCurrency();
 //			require("../../log2.php");
@@ -75,10 +74,6 @@
                     {
                         $qty = 'больше 6';
                     }
-                    else if($row['qty']>0)
-                    {
-                        $qty=$row['qty'];
-                    }
                     else
                     {
                         $qty=$row['qty'];
@@ -90,76 +85,6 @@
                     else if($row['qtyOrdered']>6)
                     {
                         $qtyOrdered = 'больше 6';
-                    }
-                    else if($row['qtyOrdered']>0)
-                    {
-                        $qtyOrdered=$row['qtyOrdered'];
-                    }
-                    else
-                    {
-                        $qtyOrdered=$row['qtyOrdered'];
-                    }
-                    $parts[$xx]['qty'] = $qty;
-                    $parts[$xx]['qtyOrdered'] = $qtyOrdered;
-                    $xx++;
-				}
-			}
-            require ($dir.'dbclose.php');
-
-			//THIS PART IS TO ADD INJECTORS TO MAIN CATALOG
-
-            require ($dir.'dbconnect.php');
-
-			if (empty($_GET))
-			{
-				$query="
-				SELECT p.ID as ProductID, p.Description AS ProductName, p.Price as ListPrice, p.Numbers AS CategoryName, p.stock as qty, p.ordered as qtyOrdered
-				from inventoryProDiesel as p
-				order by p.Description
-				";
-			}
-			else
-			{
-				$query = "SELECT p.ID as ProductID, p.Description AS ProductName, p.Price as ListPrice, p.Numbers AS CategoryName, p.stock as qty, p.ordered as qtyOrdered
-				FROM inventoryProDiesel AS p where " . $vv . "
-				order by p.Description
-				";
-			}
-			$qresult = @mysqli_query($dbc, $query);
-			if(mysqli_num_rows($qresult)){
-				while ($row = mysqli_fetch_array($qresult)) {
-                    $parts[$xx]['description'] = htmlspecialchars($row['ProductName']) . ' ProDiesel';
-                    $x = (int)((($row['ListPrice']))*$currency);
-					$x = (int)($x - $x%10);//$x = (int)($x - $x%10  +10);
-					$x = number_format($x,2);
-                    $parts[$xx]['price'] = $x;
-                    if($row['qty']>12)
-                    {
-                        $qty = 'больше 12';
-                    }
-                    else if($row['qty']>6)
-                    {
-                        $qty = 'больше 6';
-                    }
-                    else if($row['qty']>0)
-                    {
-                        $qty=$row['qty'];
-                    }
-                    else
-                    {
-                        $qty=$row['qty'];
-                    }
-                    if($row['qtyOrdered']>12)
-                    {
-                        $qtyOrdered = 'больше 12';
-                    }
-                    else if($row['qtyOrdered']>6)
-                    {
-                        $qtyOrdered = 'больше 6';
-                    }
-                    else if($row['qtyOrdered']>0)
-                    {
-                        $qtyOrdered=$row['qtyOrdered'];
                     }
                     else
                     {
