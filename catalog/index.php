@@ -23,7 +23,7 @@
         <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
         </div>
         <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
-       
+
         </div>
         <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;">
         <!-- livezilla.net code --><script type="text/javascript" id="a847c8fe02838b858cac43e902dd4c0e" src="http://seltex.ru/livezilla/script.php?id=a847c8fe02838b858cac43e902dd4c0e"></script><!-- http://www.livezilla.net -->
@@ -222,8 +222,8 @@
                         </li>
                         <li><i class="fa fa-skype fa-fw"></i>pro-diesel</li>
                         <li>
-                            <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="24" height="24">
-                            <span> 456201946</span>
+                            <img src="https://wwp.icq.com/scripts/online.dll?icq=616856441&amp;img=5" alt="ICQ" width="24" height="24">
+                            <span> 616856441</span>
                         </li>
                     </ul>
                     <br>
