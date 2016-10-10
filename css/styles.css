@@ -228,7 +228,7 @@ a:hover.contact-button {
   margin: 0;
 }
 #portfolio * {
-  z-index: 2;
+  z-index: 0;
 }
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
@@ -276,3 +276,16 @@ a:hover.contact-button {
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }*/
+
+/*PHONE ENTER DIV*/
+.phoneEnter {
+    position: fixed;
+    width: 360px;
+    top: 2px;
+    right: -360px;
+    visibility: visible;
+}
+
+#button {
+    width: 111.3px;
+}
