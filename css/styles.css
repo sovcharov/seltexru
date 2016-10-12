@@ -280,12 +280,17 @@ a:hover.contact-button {
 /*PHONE ENTER DIV*/
 .phoneEnter {
     position: fixed;
-    width: 360px;
+    width: 380px;
     top: 2px;
-    right: -360px;
-    visibility: visible;
+    right: -380px;
 }
 
 #button {
     width: 111.3px;
+}
+
+#phoneInput {
+    width: 360px;
+    top: 2px;
+    float: left;
 }

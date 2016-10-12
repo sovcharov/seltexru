@@ -18,15 +18,29 @@
 
 <body>
     <div class="top-bar">
-        <div class="col-xs-5" style=""><img src="img/seltexLogoTranspYellow.png" width="220" height="48" class="" alt="Seltex"></div>
+        <div class="col-xs-5" style="">
+            <img src="img/seltexLogoTranspYellow.png" width="220" height="48" class="" alt="Seltex">
+        </div>
         <div class="col-xs-3 hidden-xs" style=" line-height:50px; text-align:right; font-size:18px;">
         <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
         </div>
         <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
 
         </div>
-        <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;">
-        <!-- livezilla.net code --><script type="text/javascript" id="a847c8fe02838b858cac43e902dd4c0e" src="http://seltex.ru/livezilla/script.php?id=a847c8fe02838b858cac43e902dd4c0e"></script><!-- http://www.livezilla.net -->
+        <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;"  onclick="callMe()">
+            <a href="#" ><img src="img/phonecall.png" width="" height="" class="" alt="Seltex"></a>
+        </div>
+        <div class = "phoneEnter">
+            <div id="phoneInput">
+                <div class="input-group">
+                    <input type="text" id="phone" class="form-control input-lg" placeholder="Введите номер телефона" name="phone" oninput ="checkPhone()">
+                    <span class="input-group-btn">
+                        <button id = "button" class="btn btn-danger btn-lg" type="submit" onclick = "sendPhone()">Заказать</button>
+                    </span>
+                </div>
+
+            </div>
+            <a href="#" onclick="hide();"><span class="glyphicon glyphicon-remove" aria-hidden="true" style = "color:gray; font-size:20px"></span></a>
         </div>
     </div>
     <nav class="navbar-inverse my-navbar navbar-fixed-top">
@@ -252,6 +266,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Additional Functions JavaScript -->
+    <script src="js/main.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>

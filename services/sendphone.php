@@ -3,7 +3,6 @@ header('Content-Type: text/html; charset=utf-8');
 $phone = $_POST["phone"];
 $phone = $phone;
 $regex = '/^\+{0,1}[0-9\-]{7,11}$/';
-// echo $phone;
 if(preg_match($regex,$phone)){
     require ("../PHPMailer/PHPMailerAutoload.php");
     $mail = new PHPMailer;

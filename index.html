@@ -28,15 +28,18 @@
 
         </div>
         <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;"  onclick="callMe()">
-            <a href="#"><img src="img/phonecall.png" width="" height="" class="" alt="Seltex"></a>
+            <a href="#" ><img src="img/phonecall.png" width="" height="" class="" alt="Seltex"></a>
         </div>
         <div class = "phoneEnter">
-            <div class="input-group">
-                <input type="text" id="phone" class="form-control input-lg" placeholder="Введите номер телефона" name="phone" oninput ="checkPhone()">
-                <span class="input-group-btn">
-                    <button id = "button" class="btn btn-danger btn-lg" type="submit" onclick = "sendPhone()">Заказать</button>
-                </span>
+            <div id="phoneInput">
+                <div class="input-group">
+                    <input type="text" id="phone" class="form-control input-lg" placeholder="Введите номер телефона" name="phone" oninput ="checkPhone()">
+                    <span class="input-group-btn">
+                        <button id = "button" class="btn btn-danger btn-lg" type="submit" onclick = "sendPhone()">Заказать</button>
+                    </span>
+                </div>
             </div>
+            <a href="#" onclick="hide();"><span class="glyphicon glyphicon-remove" aria-hidden="true" style = "color:gray; font-size:20px"></span></a>
         </div>
     </div>
 

@@ -52,7 +52,7 @@ var sendPhone = function () {
             }
         },
         submitPhone = function () {
-            $.post("services/sendphone.php",
+            $.post("../services/sendphone.php",
                 {
                     phone: $('#phone').val()
                 },
