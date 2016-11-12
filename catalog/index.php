@@ -22,7 +22,7 @@
             <img src="img/seltexLogoTranspYellow.png" width="220" height="48" class="" alt="Seltex">
         </div>
         <div class="col-xs-3 hidden-xs" style=" line-height:50px; text-align:right; font-size:18px;">
-        <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
+            <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
         </div>
         <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
 
@@ -81,51 +81,54 @@
     <div class="navbar-space"></div>
     <div class="col-xs-12">
         <?php
-    require ('getData.php');
-?>
-            <div class="container" style="margin-top:30px;">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                        <p class="text-muted">Найдено результатов:
-                            <?=sizeof($parts);?>
-                        </p>
-                        <hr class="small">
-                    </div>
+        require ('getData.php');
+        ?>
+        <div class="container" style="margin-top:30px;">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <p class="text-muted">По фразе <span style="color:red"><?=$_GET["part"];?></span> найдено результатов: <span style="color:red"><?=sizeof($parts);?></span>
+                    </p>
                 </div>
             </div>
+        </div>
+        <section  class="">
+            <table class = "table table-condensed">
+                <tr><th class="">#</th><th>Наименование детали</th><th class="col-xs-1">Цена <i class="fa fa-rub fa-fw" style="font-size:12px;"></i></th><th class="col-xs-1">На складе</th><th class="col-xs-1">В Пути</th></tr>
+                <?php
+                $line = 0;
+                foreach($parts as $value) {
+                    $line += 1;
+                    echo '<tr>';
+                    echo '<td>'.$line.'</td>';
+                    echo '<td>'.$value["description"].'</td>';
+                    if($value["price"]) {
+                        echo '<td>'.number_format($value["price"],2,',',' ').'</td>';
+                    } else {
+                        echo '<td>-</td>';
+                    }
+                    if($value["qty"]=="0") {
+                        echo '<td>'.$value["qty"].'</td>';
 
-            <?php
-    foreach($parts as $value) {
-        echo '<div class="row my-panel">
-            <div class="col-sm-12">
-                <span class="col-sm-12" style="font-size:;font-weight:bold; color:dimgray;">
-                '.$value["description"].'
-                </span>
-            </div>
-            <div class="col-sm-6">
-                <span class="col-sm-12" style="font-size:18px;"><span class="" style="font-weight:bold; color: firebrick">
-                '.$value["price"].'
-                </span><i class="fa fa-rub fa-fw" style="font-size:12px;"></i></span>
+                    } else if ($value["qty"]>"2") {
+                        echo '<td style="background-color:#B8FFDB">'.$value["qty"].'</td>';
+                    } else {
+                        echo '<td style="background-color:#ffc2b3">'.$value["qty"].'</td>';
+                    }
+                    if($value["qtyOrdered"]=="0") {
+                        echo '<td>'.$value["qtyOrdered"].'</td>';
 
-            </div>
-            <div class="col-sm-6">';
-                if($value["qty"]!="0") {
-                    echo '<span class="col-xs-6" style="background-color:#B8FFDB">На складе: <span style="color:;font-weight:bold">'.$value["qty"].'</span></span>';
-                } else {
-                    echo '<span class="col-xs-6" style="background-color:#FFD1B2">На складе: <span style="color:;font-weight:bold">'.$value["qty"].'</span></span>';
+                    } else if ($value["qtyOrdered"]>"2") {
+                        echo '<td style="background-color:#B8FFDB">'.$value["qtyOrdered"].'</td>';
+                    } else {
+                        echo '<td style="background-color:#ffc2b3">'.$value["qtyOrdered"].'</td>';
+                    }
+                    echo '</tr>';
                 }
-                if($value["qtyOrdered"]!="0") {
-                    echo '<span class="col-xs-6" style="background-color:#B8FFDB">В пути: <span style="color:;font-weight:bold">'.$value["qtyOrdered"].'</span></span>';
-                } else {
-                    echo '<span class="col-xs-6" style="background-color:#FFD1B2">В пути: <span style="color:;font-weight:bold">'.$value["qtyOrdered"].'</span></span>';
-                }
-                echo '
-
-            </div>
-        </div>';
-    }
-?>
+                ?>
+            </table>
+        </section>
     </div>
+
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
@@ -218,18 +221,18 @@
         <small>
             <a href="https://www.google.com/maps/embed/v1/place?q=59.761528,30.474268&center=59.761528,30.474268&key=AIzaSyDUC12nb9QjtvAGwwraeuBrBLDD9gmDwoU"></a>
         </small>
-        </iframe>
-    </section>
+    </iframe>
+</section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Seltex</strong>
-                    </h4>
-                    <p>Московское шоссе, 231 к. 5
-                        <br>Санкт-Петербург, 196627</p>
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Seltex</strong>
+                </h4>
+                <p>Московское шоссе, 231 к. 5
+                    <br>Санкт-Петербург, 196627</p>
                     <ul class="list-unstyled">
                         <li class="contacts-list" style="font-weight:bold; color:darkred;"><i class="fa fa-phone fa-fw"></i>+7 812 959-13-57</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
@@ -244,134 +247,134 @@
 
                     <!--
                     <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-vk fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
--->
+                    <li>
+                    <a href="#"><i class="fa fa-vk fa-fw fa-3x"></i></a>
+                </li>
+                <li>
+                <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+            </li>
+        </ul>
+    -->
 
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; www.seltex.ru 2016</p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+    <hr class="small">
+    <p class="text-muted">Copyright &copy; www.seltex.ru 2016</p>
+</div>
+</div>
+</div>
+<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+</footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <!-- Additional Functions JavaScript -->
-    <script src="js/main.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-        // Scrolls to the selected menu item on the page
-        $(function () {
-            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
-        //#to-top button appears after scrolling
-        var fixed = false;
-        $(document).scroll(function () {
-            if ($(this).scrollTop() > 250) {
-                if (!fixed) {
-                    fixed = true;
-                    // $('#to-top').css({position:'fixed', display:'block'});
-                    $('#to-top').show("slow", function () {
-                        $('#to-top').css({
-                            position: 'fixed',
-                            display: 'block'
-                        });
-                    });
-                }
-            } else {
-                if (fixed) {
-                    fixed = false;
-                    $('#to-top').hide("slow", function () {
-                        $('#to-top').css({
-                            display: 'none'
-                        });
-                    });
-                }
+<!-- Additional Functions JavaScript -->
+<script src="js/main.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+// Scrolls to the selected menu item on the page
+$(function () {
+    $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
             }
-        });
-        // Disable Google Maps scrolling
-        // See http://stackoverflow.com/a/25904582/1607849
-        // Disable scroll zooming and bind back the click event
-        var onMapMouseleaveHandler = function (event) {
-            var that = $(this);
-            that.on('click', onMapClickHandler);
-            that.off('mouseleave', onMapMouseleaveHandler);
-            that.find('iframe').css("pointer-events", "none");
         }
-        var onMapClickHandler = function (event) {
-                var that = $(this);
-                // Disable the click handler until the user leaves the map area
-                that.off('click', onMapClickHandler);
-                // Enable scrolling zoom
-                that.find('iframe').css("pointer-events", "auto");
-                // Handle the mouse leave event
-                that.on('mouseleave', onMapMouseleaveHandler);
-            }
-            // Enable map zooming with mouse scroll when the user clicks the map
-        $('.map').on('click', onMapClickHandler);
-    </script>
+    });
+});
+//#to-top button appears after scrolling
+var fixed = false;
+$(document).scroll(function () {
+    if ($(this).scrollTop() > 250) {
+        if (!fixed) {
+            fixed = true;
+            // $('#to-top').css({position:'fixed', display:'block'});
+            $('#to-top').show("slow", function () {
+                $('#to-top').css({
+                    position: 'fixed',
+                    display: 'block'
+                });
+            });
+        }
+    } else {
+        if (fixed) {
+            fixed = false;
+            $('#to-top').hide("slow", function () {
+                $('#to-top').css({
+                    display: 'none'
+                });
+            });
+        }
+    }
+});
+// Disable Google Maps scrolling
+// See http://stackoverflow.com/a/25904582/1607849
+// Disable scroll zooming and bind back the click event
+var onMapMouseleaveHandler = function (event) {
+    var that = $(this);
+    that.on('click', onMapClickHandler);
+    that.off('mouseleave', onMapMouseleaveHandler);
+    that.find('iframe').css("pointer-events", "none");
+}
+var onMapClickHandler = function (event) {
+    var that = $(this);
+    // Disable the click handler until the user leaves the map area
+    that.off('click', onMapClickHandler);
+    // Enable scrolling zoom
+    that.find('iframe').css("pointer-events", "auto");
+    // Handle the mouse leave event
+    that.on('mouseleave', onMapMouseleaveHandler);
+}
+// Enable map zooming with mouse scroll when the user clicks the map
+$('.map').on('click', onMapClickHandler);
+</script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/57d69c113bec6867d943a729/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/57d69c113bec6867d943a729/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter39588180 = new Ya.Metrika({
-                    id:39588180,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true
-                });
-            } catch(e) { }
-        });
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter39588180 = new Ya.Metrika({
+                id:39588180,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true
+            });
+        } catch(e) { }
+    });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/39588180" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->

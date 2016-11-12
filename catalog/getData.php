@@ -65,7 +65,6 @@
                     $parts[$xx]['description'] = htmlspecialchars($row['ProductName']);
                     $x = (int)((($row['ListPrice']))*$currency);
 					$x = (int)($x - $x%10);//$x = (int)($x - $x%10  +10);
-					$x = number_format($x,2);
                     $parts[$xx]['price'] = $x;
                     if($row['qty']>12)
                     {
