@@ -1,11 +1,9 @@
 <?php
-            $dir = '../../';
-           $dir = '../../seltexrudbconnect/';
-
-			require ('../services/getcurrency.php');
-			$currency = 1;//getCurrency();
-//			require("../../log2.php");
-			require ($dir.'dbconnect.php');
+            $dir = '../../seltexrudbconnect/';//comment for production
+            //require ('../services/getcurrency.php');
+            $currency = 1;//getCurrency();
+            require ($dir.'log2.php');
+            require ($dir.'dbconnect.php');
 			if (empty($_GET) || $_GET["part"]=="Поиск в каталоге")
 			{
 				if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE')){

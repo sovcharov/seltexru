@@ -93,7 +93,7 @@
         </div>
         <section  class="">
             <table class = "table table-condensed">
-                <tr><th class="">#</th><th>Наименование детали</th><th class="col-xs-1">Цена <i class="fa fa-rub fa-fw" style="font-size:12px;"></i></th><th class="col-xs-1">На складе</th><th class="col-xs-1">В Пути</th></tr>
+                <tr><th class="">#</th><th>Наименование детали</th><th class="col-xs-1">Цена, <i class="fa fa-rub fa-fw" style="font-size:12px;"></i></th><th class="col-xs-1">На складе</th><th class="col-xs-1">В пути</th></tr>
                 <?php
                 $line = 0;
                 foreach($parts as $value) {

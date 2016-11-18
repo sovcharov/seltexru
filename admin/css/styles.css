@@ -1,0 +1,11 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
+@charset "utf-8";
+.nav-pills li.active a,
+.nav-pills li.active a:hover,
+.nav-pills li.active a:focus {
+    background-color:#CACACA;
+	color:white;
+}
+.nav-pills a {
+	color:gray;
+}
