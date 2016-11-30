@@ -188,7 +188,7 @@ a:hover.contact-button {
   text-align: center;
   top: 45%;
   margin-top: -12px;
-  color: #18BC9C;
+  color: yellow;/*#18BC9C;*/
     text-shadow: 1px 1px 0 #000,
     -1px 1px 0 #000,
     1px -1px 0 #000,

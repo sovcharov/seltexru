@@ -76,6 +76,7 @@
         <!-- /.container-fluid -->
     </nav>
 
+
     <div id="top" class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
@@ -100,6 +101,9 @@
                     $line += 1;
                     echo '<tr>';
                     echo '<td>'.$line.'</td>';
+                    if($value['link']) {
+                        $value['description'] = $value['description'] .' <a href="'.$value['link'].'" class="glyphicon glyphicon-search" aria-hidden="true" style="color:red; padding-left:10px;" title="Показать содержание"></a>';
+                    }
                     echo '<td>'.$value["description"].'</td>';
                     if($value["price"]) {
                         echo '<td>'.number_format($value["price"],2,',',' ').'</td>';
@@ -128,7 +132,9 @@
             </table>
         </section>
     </div>
-
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
