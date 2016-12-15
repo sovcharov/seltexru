@@ -1,0 +1,6 @@
+User-agent: Yandex
+Disallow: /admin
+Host: seltex.ru
+
+User-agent: *
+Disallow: /admin

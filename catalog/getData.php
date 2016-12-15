@@ -7,7 +7,7 @@
 			if (empty($_GET) || $_GET["part"]=="Поиск в каталоге")
 			{
 				if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE')){
-					echo  '<p id="" style="margin:0px; margin-left:3px; padding:0px; height:16px; color:red;">Для Internet Explorer версии 9 и ниже отображается неполный каталог!!! Всего в каталоге 3600+ позиций. Воспользуйтесь поиском!</p>';
+					echo  '<p id="" style="margin:0px; margin-left:3px; padding:0px; height:16px; color:red;">Для Internet Explorer версии 9 и ниже отображается неполный каталог!!! Всего в каталоге 5000+ позиций. Воспользуйтесь поиском!</p>';
 					$query="
 					SELECT p.ID as ProductID, p.Description AS ProductName, p.Price as ListPrice, p.Numbers AS CategoryName, p.stock as qty, p.ordered as qtyOrdered, p.link as link
 					from inventory as p
@@ -51,6 +51,7 @@
 				}
 				$query = "SELECT p.ID as ProductID, p.Description AS ProductName, p.Price as ListPrice, p.Numbers AS CategoryName, p.stock as qty, p.ordered as qtyOrdered, p.link as link
 				FROM inventory AS p where " . $vv . "
+                and description not like N'я%'
 				order by p.Description
 				";
 			}
