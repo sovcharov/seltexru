@@ -70,10 +70,10 @@
                     {
                         $qty = 'больше 12';
                     }
-                    else if($row['qty']>6)
-                    {
-                        $qty = 'больше 6';
-                    }
+                    // else if($row['qty']>6)
+                    // {
+                    //     $qty = 'больше 6';
+                    // }
                     else
                     {
                         $qty=$row['qty'];
@@ -82,10 +82,10 @@
                     {
                         $qtyOrdered = 'больше 12';
                     }
-                    else if($row['qtyOrdered']>6)
-                    {
-                        $qtyOrdered = 'больше 6';
-                    }
+                    // else if($row['qtyOrdered']>6)
+                    // {
+                    //     $qtyOrdered = 'больше 6';
+                    // }
                     else
                     {
                         $qtyOrdered=$row['qtyOrdered'];
