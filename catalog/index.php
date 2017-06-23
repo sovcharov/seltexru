@@ -104,7 +104,7 @@
                     if($value['link']) {
                         $value['description'] = $value['description'] .' <a href="'.$value['link'].'" class="glyphicon glyphicon-search" aria-hidden="true" style="color:red; padding-left:10px;" title="Показать содержание"></a>';
                     }
-                    echo '<td>'.$value["description"].' <a href="http://seltex.ru:5555/catalog/'.$value['ProductID'].'" class="glyphicon glyphicon-info-sign" aria-hidden="true" style="color:#18BC9C; padding-left:10px;" title="Показать содержание" target="_blank"></a></td>';
+                    echo '<td>'.$value["description"].' <a href="http://seltex.ru:8080/catalog/'.$value['ProductID'].'" class="glyphicon glyphicon-info-sign" aria-hidden="true" style="color:#18BC9C; padding-left:10px;" title="Подробно" target="_blank"></a></td>';
                     if($value["price"]) {
                         echo '<td>'.number_format($value["price"],2,',',' ').'</td>';
                     } else {
