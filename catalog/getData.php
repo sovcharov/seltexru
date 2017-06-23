@@ -63,8 +63,9 @@
 				while ($row = mysqli_fetch_array($qresult)) {
                     $parts[$xx]['description'] = htmlspecialchars($row['ProductName']);
                     $x = (int)((($row['ListPrice']))*$currency);
-					$x = (int)($x - $x%10);//$x = (int)($x - $x%10  +10);
+                    $x = (int)($x - $x%10);//$x = (int)($x - $x%10  +10);
                     $parts[$xx]['price'] = $x;
+                    $parts[$xx]['ProductID'] = $row['ProductID'];
                     $parts[$xx]['link'] = htmlspecialchars($row['link']);
                     if($row['qty']>12)
                     {
