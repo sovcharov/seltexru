@@ -2,7 +2,7 @@
             $dir = '../../seltexrudbconnect/';
             //require ('../services/getcurrency.php');
             $currency = 1;//getCurrency();
-            require ($dir.'log2.php');
+            //require ($dir.'log2.php');
             require ($dir.'dbconnect.php');
 			if (empty($_GET) || $_GET["part"]=="Поиск в каталоге")
 			{

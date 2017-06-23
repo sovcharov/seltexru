@@ -12,12 +12,52 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>http://seltex.ru/catalog/</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>http://seltex.ru/equipment/</loc>
   <lastmod>2016-12-02T15:07:59+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://seltex.ru/equipment/cat/</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat+c-12</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat+c-13</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat+c-15</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat+c-9</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat+3126</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=cat+c-6.6</loc>
   <lastmod>2016-12-02T15:07:59+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
@@ -176,8 +216,16 @@
   <lastmod>2016-12-02T15:07:59+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
-
-
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=%D0%B3%D0%B8%D0%BB%D1%8C%D0%B7%D0%B0+cat</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://seltex.ru/catalog/index.php?part=%D0%B3%D0%B8%D0%BB%D1%8C%D0%B7%D0%B0+cat+c-15</loc>
+  <lastmod>2016-12-02T15:07:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
 
 
 
@@ -258,4 +306,6 @@
   <lastmod>2016-12-02T15:07:59+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
+
+
 </urlset>
