@@ -35,6 +35,31 @@ h6 {
     src: url(../fonts/bitstreamverabd.ttf);
 }
 
+.my-part-description {
+
+}
+
+.my-part-description h1 {
+  /*color: gray;*/
+  font-size: 48px;
+  /*text-align: center;*/
+  /*color: #18BC9C;*/
+
+}
+.my-part-description p span {
+  color: gray;
+  font-size: 32px;
+  font-weight: bold;
+  /*text-align: center;*/
+  color: #18BC9C;
+
+}
+
+.my-part-image {
+  width: 200px;
+  height: 200px;
+}
+
 .top-bar {
     position: fixed;
     top: 0px;
