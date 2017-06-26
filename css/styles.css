@@ -134,6 +134,10 @@ h6 {
     background-color: #222;
 }
 
+.navbar-space-catalog {
+    height: 50px;
+}
+
 .text-in-service {
     font-size: 1em;
 }
@@ -301,6 +305,22 @@ a:hover.contact-button {
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }*/
+
+
+.my-panel {
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 7px;
+    border-color: darkgray;
+    margin: 0 auto;
+    margin-bottom: 2px;
+/*    width: 99.5%;*/
+}
+
+.my-panel span {
+    padding: 2px;
+}
 
 /*PHONE ENTER DIV*/
 .phoneEnter {

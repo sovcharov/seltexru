@@ -77,7 +77,7 @@
     </nav>
 
 
-    <div id="top" class="navbar-space"></div>
+    <div id="top" class="navbar-space-catalog"></div>
     <div class="navbar-space"></div>
     <div class="navbar-space"></div>
     <div class="col-xs-12">
