@@ -78,8 +78,8 @@
 
 
     <div id="top" class="navbar-space-catalog"></div>
-    <div class="navbar-space"></div>
-    <div class="navbar-space"></div>
+    <div class="navbar-space-catalog"></div>
+    <div class="navbar-space-catalog"></div>
     <div class="col-xs-12">
         <?php
         require ('getData.php');
@@ -136,11 +136,11 @@
     <div class="tooltip">Hover over me
       <span class="tooltiptext">Tooltip text</span>
     </div>
-    <div class="navbar-space"></div>
-    <div class="navbar-space"></div>
-    <div class="navbar-space"></div>
-    <div class="navbar-space"></div>
-    <div class="navbar-space"></div>
+    <div class="navbar-space-catalog"></div>
+    <div class="navbar-space-catalog"></div>
+    <div class="navbar-space-catalog"></div>
+    <div class="navbar-space-catalog"></div>
+    <div class="navbar-space-catalog"></div>
 
 
     <!-- Callout -->
