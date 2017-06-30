@@ -57,7 +57,7 @@
             </div>
 
             <!-- /.navbar-collapse -->
-            <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:" action="/catalog/index.php" method="get">
+ <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:" onsubmit="this.action='/catalog/'+this.part.value;" method="get">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part">
                     <span class="input-group-btn">
