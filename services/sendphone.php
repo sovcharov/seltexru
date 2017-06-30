@@ -15,7 +15,7 @@ if(preg_match($regex,$phone)){
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;
     $mail->setFrom('sales2@seltex.ru', 'SELTEX.RU');
-    $mail->addAddress('sales@seltex.ru');               // Name is optional
+    $mail->addAddress('so@seltex.ru');               // Name is optional
     $mail->isHTML(true);
     $mail->CharSet = 'UTF-8';
     $mail->Subject = 'Заказ обратного звонка с сайта';
