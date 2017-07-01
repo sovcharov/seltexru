@@ -47,12 +47,8 @@ h6 {
 
 }
 .my-part-description p span {
-  color: gray;
-  font-size: 32px;
   font-weight: bold;
-  /*text-align: center;*/
   color: #18BC9C;
-
 }
 
 .my-part-image {
