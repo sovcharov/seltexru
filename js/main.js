@@ -107,10 +107,3 @@ var blinker = function () {
   setTimeout(blinker, 500);
 };
 blinker();
-
-var sendSearchForm = function (str) {
-  'use strict';
-  str = str.replace(/\/|\\/g, " ");
-  document.getElementById('form1').action = '/catalog/'+str;
-  document.getElementById('form1').submit();
-};
