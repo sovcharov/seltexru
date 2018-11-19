@@ -17,66 +17,9 @@
 </head>
 
 <body>
-    <div class="top-bar">
-        <div class="col-xs-5" style="">
-            <img src="/img/seltexLogoTranspYellow.png" width="220" height="48" class="" alt="Seltex">
-        </div>
-        <div class="col-xs-3 hidden-xs" style=" line-height:50px; text-align:right; font-size:18px;">
-            <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
-        </div>
-        <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
 
-        </div>
-        <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;"  onclick="callMe()">
-            <a href="#" ><img src="/img/phonecall.png" width="" height="" class="" alt="Seltex"></a>
-        </div>
-        <div class = "phoneEnter">
-            <div id="phoneInput">
-                <div class="input-group">
-                    <input type="text" id="phone" class="form-control input-lg" placeholder="Введите номер телефона" name="phone" oninput ="checkPhone()">
-                    <span class="input-group-btn">
-                        <button id = "button" class="btn btn-danger btn-lg" type="submit" onclick = "sendPhone()">Заказать</button>
-                    </span>
-                </div>
-            </div>
-            <a href="#" onclick="hide();"><span class="glyphicon glyphicon-remove" aria-hidden="true" style = "color:gray; font-size:20px"></span></a>
-        </div>
-    </div>
+  <div id="header"></div>
 
-    <nav class="navbar-inverse my-navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="col-sm-3 navbar-header">
-                <span class="navbar-brand" style="width:240px; font-size:20px; font-family: Arial black; padding:5px; text-align:center;">(812) 320-52-10<br> <span style="font-size:14px; font-family: arial;">8-800-550-52-10 <span style="font-size:12px; color: #18BC9C; font-family: arial;">бесплатный</span></span></span>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--                <div class="my-logo" href="#top"><img src="/img/seltexLogoTranspYellow.png" height="40" width="170"></div>-->
-            </div>
-
-            <!-- /.navbar-collapse -->
- <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:" onsubmit="this.action='/catalog/'+this.part.value;" method="get">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part">
-                    <span class="input-group-btn">
-                        <button class="btn btn-warning my-search-button" type="submit">Поиск</button>
-                    </span>
-                </div>
-            </form>
-            <div class="collapse navbar-collapse col-sm-6 navbar-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">На главную</a></li>
-                    <!-- <li><a href="/catalog/">Каталог</a></li> -->
-                    <li style=""><a href="#contact" class="contact-button" style="color: #18BC9C;">Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <div id="top" class="navbar-space"></div>
 
     <!-- Header -->
     <header class="header">
@@ -206,6 +149,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
+    $("#header").load("/templates/header.html");
+    $("#footer").load("/templates/footer.html");
         // Scrolls to the selected menu item on the page
         $(function () {
             $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
