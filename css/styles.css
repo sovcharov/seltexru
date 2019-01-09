@@ -36,10 +36,12 @@ h6 {
 }
 
 .my-part-description {
-  font-size: 12px;
 }
 .my-part-description h1 {
   font-size: 24px;
+}
+.my-part-description p {
+  font-size: 14px;
 }
 .my-part-description p span {
   font-weight: bold;
