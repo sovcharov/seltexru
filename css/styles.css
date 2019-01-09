@@ -31,14 +31,13 @@ h6 {
 }
 
 @font-face {
-    font-family: myFont;
-    src: url(../fonts/bitstreamverabd.ttf);
+  font-family: myFont;
+  src: url(../fonts/bitstreamverabd.ttf);
 }
 
 .my-part-description {
-
+  font-size: 12px;
 }
-
 .my-part-description h1 {
   font-size: 24px;
 }
