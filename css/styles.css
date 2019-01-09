@@ -40,11 +40,7 @@ h6 {
 }
 
 .my-part-description h1 {
-  /*color: gray;*/
-  font-size: 48px;
-  /*text-align: center;*/
-  /*color: #18BC9C;*/
-
+  font-size: 24px;
 }
 .my-part-description p span {
   font-weight: bold;
@@ -56,16 +52,11 @@ h6 {
   height: 200px;
 }
 
-
-
 .my-navbar {
   position: fixed;
-
-    top: 0px;
-    /* border-radius: 0; */
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-/*    background-color: white;*/
+  top: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .my-navbar-brand {
@@ -147,8 +138,7 @@ a:link.contact-button,
 a:visited.contact-button,
 a:active.contact-button {
     color: #18BC9C;
-        opacity: 0.7;
-
+    opacity: 0.7;
     font-size:18px;
     font-weight:bold;
 }
@@ -161,31 +151,18 @@ a:hover.contact-button {
 
 #portfolio .portfolio-item {
   margin: 0 0 0px;
-/*  right: 0;*/
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
-/*  max-width: 400px;*/
-    max-height: 400px;
-/*  margin: 0 auto;*/
-    text-align: center;
-    white-space: nowrap;
-/*
-        border-width: 1px;
-    border-color: gray;
-*/
-/*    border-style: solid;*/
-/*    border-radius: 5px;*/
-
+  max-height: 400px;
+  text-align: center;
+  white-space: nowrap;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-/*  background: rgba(24, 188, 156, 0.9);*/
-/*    background-color: lightblue;*/
   position: absolute;
   width: 100%;
   height: 100%;
-/*  opacity: 0.5;*/
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
@@ -195,9 +172,6 @@ a:hover.contact-button {
   opacity: 1;
     background: rgba(24, 188, 156, 0.9);
     color: white;
-/*        text-shadow: 1px 1px black;*/
-
-
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
@@ -278,26 +252,6 @@ a:hover.contact-button {
     -moz-animation-iteration-count: infinite;
 }
 
-/*
-@-moz-keyframes blinker {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}
-
-@-webkit-keyframes blinker {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}
-
-@keyframes blinker {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}*/
-
-
 .my-panel {
     padding: 5px;
     border-style: solid;
@@ -306,7 +260,6 @@ a:hover.contact-button {
     border-color: darkgray;
     margin: 0 auto;
     margin-bottom: 2px;
-/*    width: 99.5%;*/
 }
 
 .my-panel span {
@@ -330,7 +283,6 @@ a:hover.contact-button {
     top: 2px;
     float: left;
 }
-
 
 .choice {
     font-size: 30px;
