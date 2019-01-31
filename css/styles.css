@@ -40,10 +40,10 @@ h6 {
 .my-part-description h1 {
   font-size: 20px;
 }
-.my-part-description p {
+.my-part-description div {
   font-size: 16px;
 }
-.my-part-description p span {
+.my-part-description div span {
   font-weight: bold;
   color: #18BC9C;
 }
