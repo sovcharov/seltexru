@@ -129,10 +129,17 @@ var quoteCTP = function (partNumber) {
   var url = "/api/quotectp/" + partNumber;
   console.log(url);
   $.get(url, function(data, status){
-    quoteCTPInfoPrice
-    $("#quoteCTPInfoPrice").text(data.price);
-    $("#quoteCTPInfoQTY").text(data.qty);
-    $("#quoteCTPInfoTime").text(data.leadTime);
+    if (data.price  === 0 || data.qty === 0) {
+      $("#quoteCTPInfo").html("<span>Нет в наличии!</span>");
+    } else {
+      $("#quoteCTPInfoPrice").text(data.price);
+      $("#quoteCTPInfoQTY").text(data.qty);
+      $("#quoteCTPInfoTime").text(data.leadTime);
+      $("#quoteCTPInfoPriceSea").text(data.priceSea);
+      $("#quoteCTPInfoTimeSea").text(data.leadTimeSea);
+
+
+    }
     $("#quoteCTPSpin").hide();
     $("#quoteCTPInfo").show();
   });
