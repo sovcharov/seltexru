@@ -17,82 +17,63 @@
 </head>
 
 <body>
-    <div class="top-bar">
-        <div class="col-xs-5" style="">
-            <img src="/img/seltexLogoTranspYellow.png" width="220" height="48" class="" alt="Seltex">
-        </div>
-        <div class="col-xs-3 hidden-xs" style=" line-height:50px; text-align:right; font-size:18px;">
-            <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:sales@seltex.ru">sales@seltex.ru</a>
-        </div>
-        <div class="col-xs-3 visible-xs" style=" line-height:50px; text-align:right; font-size:18px;">
+  <link rel="stylesheet" href="font-awesome/css/all.css">
 
-        </div>
-        <div class="col-xs-4" style="line-height:50px; text-align:right; font-size:18px;"  onclick="callMe()">
-            <a href="#" ><img src="/img/phonecall.png" width="" height="" class="" alt="Seltex"></a>
-        </div>
-        <div class = "phoneEnter">
-            <div id="phoneInput">
-                <div class="input-group">
-                    <input type="text" id="phone" class="form-control input-lg" placeholder="Введите номер телефона" name="phone" oninput ="checkPhone()">
-                    <span class="input-group-btn">
-                        <button id = "button" class="btn btn-danger btn-lg" type="submit" onclick = "sendPhone()">Заказать</button>
-                    </span>
-                </div>
-            </div>
-            <a href="#" onclick="hide();"><span class="glyphicon glyphicon-remove" aria-hidden="true" style = "color:gray; font-size:20px"></span></a>
-        </div>
-    </div>
+  <nav class="navbar-inverse my-navbar navbar-fixed-top">
+      <div class="">
+          <div class="col-sm-3 navbar-header" style = "padding: 0px">
+            <span class="navbar-brand" style="width:318px; font-size:11px; ; padding-left:3px; text-align:left;font-family: Arial black;">
+              <span style="position:relative; top:-3px;"><img src="/img/seltexLogoTranspYellow.png" width="110" height="24" class="" alt="Seltex" ></span> ВСЁ ДЛЯ ДВИГАТЕЛЕЙ CAT®
 
-    <nav class="navbar-inverse my-navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="col-sm-3 navbar-header">
-                <span class="navbar-brand" style="width:240px; font-size:20px; font-family: Arial black; padding:5px; text-align:center;">(812) 320-52-10<br> <span style="font-size:14px; font-family: arial;">8-800-550-52-10 <span style="font-size:12px; color: #18BC9C; font-family: arial;">бесплатный</span></span></span>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--                <div class="my-logo" href="#top"><img src="/img/seltexLogoTranspYellow.png" height="40" width="170"></div>-->
-            </div>
+            </span>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <!--                <div class="my-logo" href="#top"><img src="img/seltexLogoTranspYellow.png" height="40" width="170"></div>-->
+          </div>
 
-            <!-- /.navbar-collapse -->
- <form class="col-sm-3 navbar-form navbar-right" role="search" style="height:" onsubmit="this.action='/catalog/'+this.part.value;" method="get">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part">
-                    <span class="input-group-btn">
-                        <button class="btn btn-warning my-search-button" type="submit">Поиск</button>
-                    </span>
-                </div>
-            </form>
-            <div class="collapse navbar-collapse col-sm-6 navbar-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">На главную</a></li>
-                    <!-- <li><a href="/catalog/">Каталог</a></li> -->
-                    <li style=""><a href="#contact" class="contact-button" style="color: #18BC9C;">Контакты</a></li>
-                </ul>
-            </div>
+
+          <!-- /.navbar-collapse -->
+          <form class="col-sm-3 navbar-form navbar-right" role="search" style="" onsubmit="this.action='/catalog/'+this.part.value;" method="get">
+              <div class="input-group" style="margin-right:5px;">
+                  <input type="text" class="form-control" placeholder="Поиск в каталоге" name="part">
+                  <span class="input-group-btn">
+                      <button class="btn btn-warning my-search-button" type="submit">Поиск</button>
+                  </span>
+              </div>
+          </form>
+
+          <div class="collapse navbar-collapse col-sm-3 navbar-right" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="#about">О компании</a></li>
+                  <li><a href="/catalog/">Каталог</a></li>
+                  <li style=""><a href="#contact" class="contact-button">Контакты</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="" style="clear: both">
+        <div class="col-sm-3" style="text-align:center;font-size:14px; font-family: Arial black;color: #ce8a2b;">(499) 288-07-10 <span style="font-size:12px; color: #9d9d9d; font-family: arial;">Москва</span>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <div id="top" class="navbar-space"></div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="text-vertical-center overlay">
-            <h1 style="font-size: 32px;">Запчасти Caterpillar, Cummins, Detroit Diesel</h1>
-            <span>Официальный представитель компаний ProDiesel и Costex Tractor Parts</span>
-            <form class="" role="search" style="width: 390px; margin: 0 auto; margin-top:20px;" onsubmit="this.action='/catalog/'+this.part.value;" method="get">
-                <div class="input-group">
-                    <input type="text" id="theInput" class="textbox form-control input-lg" placeholder="Введите номер детали" name="part">
-                    <span class="input-group-btn">
-                        <button class="btn btn-danger btn-lg" type="submit">Искать</button>
-                    </span>
-                </div>
-            </form>
+        <div class="col-sm-3" style="text-align:center;font-size:14px; font-family: Arial black;color: #ce8a2b;">(812) 320-52-10 <span style="font-size:12px; color: #9d9d9d; font-family: arial;">Санкт-Петербург</span>
         </div>
-    </header>
+        <div class="col-sm-3" style="text-align:center;font-size:14px; font-family: Arial black;color: #ce8a2b;">8-800-550-52-10 <span style="font-size:12px; color: #9d9d9d; font-family: arial;">Бесплатный по России</span>
+        </div>
+        <div class="col-sm-3" style="text-align:center;font-size:14px; font-family: Arial;color: #18BC9C; padding-bottom:2px;"><a href="mailto:sales@seltex.ru" style="text-align:center;font-size:14px; font-family: Arial;color: #ce8a2b; padding-bottom:2px;"> <i class="far fa-envelope" style="color: #18BC9C"></i>  sales@seltex.ru</a>
+        <a style="font-size: 14px;" href="https://vk.com/club5567084" class="fab fa-vk"></a>
+        <a style="font-size: 14px;" href="https://www.instagram.com/seltex.ru" class="fab fa-instagram"></a>
+        </div>
+        <!-- <div class="col-sm-3" style="text-align:center; font-size:18px;">
+            <a href="mailto:sales@seltex.ru"> <i class="fa fa-envelope-o fa-fw"></i>  sales@seltex.ru</a>
+        </div> -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  <div id="top" class="navbar-space"></div>
+  <div id="top" class="navbar-space visible-xs"></div>
 
     <!-- Footer -->
     <footer id="contact">
@@ -123,7 +104,7 @@
                         Телефоны: <span itemprop="telephone">+7 (499) 288-07-10</span>,
                         <span itemprop="telephone">8 800 550-52-10</span><br/>
                         <i class="fa fa-envelope-o fa-fw"></i><span itemprop="email">sales@seltex.ru</span>
-                        <i class="fa fa-skype fa-fw"></i>pro-diesel
+                        <i class="fab fa-skype"></i>pro-diesel
                         <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="16" height="16">
                         <span> 456201946</span><br>
 
@@ -156,8 +137,8 @@
                           Телефоны:
                           <span itemprop="telephone">+7 (812) 320-52-10</span>,
                           <span itemprop="telephone">8 800 550-52-10</span><br/>
-                          <i class="fa fa-envelope-o fa-fw"></i><span itemprop="email">sales@seltex.ru</span>
-                          <i class="fa fa-skype fa-fw"></i>pro-diesel
+                          <i class="far fa-envelope"></i><span itemprop="email">sales@seltex.ru</span>
+                          <i class="fab fa-skype"></i>pro-diesel
                           <img src="https://wwp.icq.com/scripts/online.dll?icq=616856441&amp;img=5" alt="ICQ" width="16" height="16">
                           <span> 616856441</span><br>
 
@@ -165,8 +146,12 @@
                         </address>
                       </div>
 
+                      <a style="font-size: 22px;" href="https://vk.com/club5567084" class="fab fa-vk"> Seltex в контакте</a>
+                      <br/>
+                      <a style="font-size: 22px;" href="https://www.instagram.com/seltex.ru" class="fab fa-instagram"> Seltex в instagram</a>
+
                     <hr class="small">
-                    <!-- <p class="text-muted" style="font-size: 12px;">Copyright &copy; www.seltex.ru 2019</p> -->
+                    <p class="text-muted" style="font-size: 12px;">Copyright &copy; www.seltex.ru 2019</p>
                 </div>
             </div>
         </div>
