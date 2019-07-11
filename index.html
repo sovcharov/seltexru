@@ -41,33 +41,34 @@
     </header>
 
     <!-- Vkontakte widget -->
-    <div class="text-center" style="margin-top: 10px;">
-      <div class="row">
-          <div class="col-lg-12 text-center">
-              <p class="text-muted choice">Новости: </p>
-          </div>
+    <section class="row">
+      <div class="col-md-4 " style="margin-top: 10px;">
+        <div class="">
+            <div class="text-center">
+                <h4 class="text-muted">Новости: </h4>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?161"></script>
+
+        <!-- VK Widget -->
+        <div id="vk_groups" style="margin: 0 auto"></div>
+        <script type="text/javascript">
+        VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, height: "1200"}, 5567084);
+        </script>
       </div>
-      <script type="text/javascript" src="https://vk.com/js/api/openapi.js?161"></script>
 
-      <!-- VK Widget -->
-      <div id="vk_groups" style="margin: 0 auto;"></div>
-      <script type="text/javascript">
-      VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "500", height: "2000"}, 5567084);
-      </script>
-    </div>
-
-
+  <div class="col-md-8">
     <!-- Portfolio Grid Section -->
-    <div class="container" style="margin-top: 10px;">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <p class="text-muted choice">Выберите производителя техники: </p>
+    <div class="" style="margin-top: 10px;">
+        <div class="">
+            <div class=" text-center">
+                <h4 class="text-muted">Выберите производителя техники: </h4>
             </div>
         </div>
     </div>
     <section id="portfolio">
-        <div class="">
-            <div class="row" style="width:99%; margin:0 auto;">
+        <div class="row">
+            <div class="" style="">
                 <div class="col-sm-4 portfolio-item">
                     <a href="/equipment/cat/" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -103,17 +104,17 @@
     </section>
     <hr/>
     <!-- Portfolio Grid Section -->
-    <div class="container" style="margin-top: 10px;">
+    <div class="" style="margin-top: 10px;">
         <div class="row">
             <div class="col-lg-12 text-center">
 
-                <p class="text-muted choice">Или перейдите в раздел:</p>
+                <h4 class="text-muted">Или перейдите в раздел:</h4>
             </div>
         </div>
     </div>
     <section id="portfolio">
         <div class="">
-            <div class="row" style="width:99%; margin:0 auto;">
+            <div class="row" style="">
                 <div class="col-sm-4 portfolio-item">
                     <a href="/catalog/%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D1%8B%D1%88 CAT" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -180,19 +181,11 @@
 
     <!-- About -->
     <section id="about" class="about">
-        <div class="container">
+        <div class="">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3 style="font-family:arial"><strong>Seltex</strong> - запасные части двигателей Cat, Cummins, Detroit Diesel.</h3>
                     <p class="lead">Компания <strong>Seltex</strong> поставляет запасные части двигателей Cat, Cummins, Detroit Diesel. У нас вы можете найти широкий ассортимент запчастей для техники американского производства.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h4 style="font-family:arial"><strong>Seltex</strong> - официальный представитель DSS ProDiesel Partners, LLC.</h4>
-                    <img src="img/prodiesel.gif" width="210" height="36" alt="ProDiesel">
-                    <p class="lead">DSS ProDiesel Partners, LLC ProDiesel® восстанавливает и распространяет дизельные топливные компоненты и системы, включая форсунки двигателей CAT, Cummins, Detroit Diesel и других производителей, топливные насосы двигателей Caterpillar, Cummins, Detroit Diesel. ProDiesel® является основным поставщиком аналогов оригинальных электронных форсунок и топливных насосов Кат, Камминс, Детройт Дизель и других производителей для техники любого класса на рынке дизельных двигателей. Seltex, как партнер ProDiesel®, гордится своей приверженностью обеспечивать своих клиентов исключительным сервисом и продукцией наивысшего качества по конкурентноспособным ценам.
-                    </p>
                 </div>
             </div>
             <div class="row">
@@ -203,10 +196,21 @@
                     </p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4 style="font-family:arial"><strong>Seltex</strong> - официальный представитель DSS ProDiesel Partners, LLC.</h4>
+                    <img src="img/prodiesel.gif" width="210" height="36" alt="ProDiesel">
+                    <p class="lead">DSS ProDiesel Partners, LLC ProDiesel® восстанавливает и распространяет дизельные топливные компоненты и системы, включая форсунки двигателей CAT, Cummins, Detroit Diesel и других производителей, топливные насосы двигателей Caterpillar, Cummins, Detroit Diesel. ProDiesel® является основным поставщиком аналогов оригинальных электронных форсунок и топливных насосов Кат, Камминс, Детройт Дизель и других производителей для техники любого класса на рынке дизельных двигателей. Seltex, как партнер ProDiesel®, гордится своей приверженностью обеспечивать своих клиентов исключительным сервисом и продукцией наивысшего качества по конкурентноспособным ценам.
+                    </p>
+                </div>
+            </div>
+
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
+  </div>
+</section>
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -355,11 +359,11 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <footer id="contact"  style="font-size: 16px;">
         <div class="">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                  <div class="col-xs-6">
+                  <div class="col-md-6">
                     <section class="map">
                         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=55.607950,37.658678
                         &center=55.607950,37.658678
@@ -382,15 +386,15 @@
                         </div>
                         Телефоны: <span itemprop="telephone">+7 (499) 288-07-10</span>,
                         <span itemprop="telephone">8 800 550-52-10</span><br/>
-                        <i class="fa fa-envelope-o fa-fw"></i><span itemprop="email">sales@seltex.ru</span>
-                        <i class="fab fa-skype"></i>pro-diesel
+                        <i class="far fa-envelope"></i><span itemprop="email"> sales@seltex.ru</span>
+                        <i class="fab fa-skype"></i> pro-diesel
                         <img src="https://wwp.icq.com/scripts/online.dll?icq=456201946&amp;img=5" alt="ICQ" width="16" height="16">
                         <span> 456201946</span><br>
 
                       </div>
                       </address>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6">
                       <section class="map">
                           <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=59.761528,30.474268
                           &center=59.761528,30.474268
@@ -416,8 +420,8 @@
                           Телефоны:
                           <span itemprop="telephone">+7 (812) 320-52-10</span>,
                           <span itemprop="telephone">8 800 550-52-10</span><br/>
-                          <i class="far fa-envelope"></i><span itemprop="email">sales@seltex.ru</span>
-                          <i class="fab fa-skype"></i>pro-diesel
+                          <i class="far fa-envelope"></i><span itemprop="email"> sales@seltex.ru</span>
+                          <i class="fab fa-skype"></i> pro-diesel
                           <img src="https://wwp.icq.com/scripts/online.dll?icq=616856441&amp;img=5" alt="ICQ" width="16" height="16">
                           <span> 616856441</span><br>
 
@@ -425,9 +429,8 @@
                         </address>
                       </div>
 
-                      <a style="font-size: 22px;" href="https://vk.com/club5567084" class="fab fa-vk"> Seltex в контакте</a>
-                      <br/>
-                      <a style="font-size: 22px;" href="https://www.instagram.com/seltex.ru" class="fab fa-instagram"> Seltex в instagram</a>
+                      <h5 class="text-muted">Seltex во Вконтакте: <a style="font-size: 22px;" href="https://vk.com/club5567084" class="fab fa-vk"></a></h5>
+                      <h5 class="text-muted">Seltex в Instagram: <a style="font-size: 22px;" href="https://www.instagram.com/seltex.ru" class="fab fa-instagram"></a></h5>
 
                     <hr class="small">
                     <p class="text-muted" style="font-size: 12px;">Copyright &copy; www.seltex.ru 2019</p>
