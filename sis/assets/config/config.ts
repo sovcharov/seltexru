@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 
 import { environment } from '../../environments/environment'
 
-@Injectable()
+// @Injectable()
 export class Config {
 
 
@@ -10,7 +10,7 @@ export class Config {
 
   }
   config = {
-    prod: environment
+    prod: environment.production
   }
 
   getConfig () {
