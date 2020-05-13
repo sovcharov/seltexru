@@ -123,25 +123,29 @@ blinker();
 ///////////////////////
 $("#quoteCTPInfo").hide();
 $("#quoteCTPSpin").hide();
+$("#quoteCTPError").hide();
 var quoteCTP = function (partNumber) {
   $("#quoteCTPButton").hide();
   $("#quoteCTPSpin").show();
   var url = "/api/quotectp/" + partNumber;
   console.log(url);
   $.get(url, function(data, status){
-    if (data.price  === 0 || data.qty === 0) {
-      $("#quoteCTPInfo").html("<span>Нет в наличии!</span>");
+    if (data.error) {
+      $("#quoteCTPError").show();
     } else {
-      $("#quoteCTPInfoPrice").text(data.price);
-      $("#quoteCTPInfoQTY").text(data.qty);
-      $("#quoteCTPInfoTime").text(data.leadTime);
-      $("#quoteCTPInfoPriceSea").text(data.priceSea);
-      $("#quoteCTPInfoTimeSea").text(data.leadTimeSea);
-
-
+      data = data.part;
+      if (data.price  === 0 || data.qty === 0) {
+        $("#quoteCTPInfo").html("<span>Нет в наличии!</span>");
+      } else {
+        $("#quoteCTPInfoPrice").text(data.price);
+        $("#quoteCTPInfoQTY").text(data.qty);
+        $("#quoteCTPInfoTime").text(data.leadTime);
+        $("#quoteCTPInfoPriceSea").text(data.priceSea);
+        $("#quoteCTPInfoTimeSea").text(data.leadTimeSea);
+      }
+      $("#quoteCTPInfo").show();
     }
     $("#quoteCTPSpin").hide();
-    $("#quoteCTPInfo").show();
   });
 };
 //////////////////////////
