@@ -1,3 +1,10 @@
 #data folder created from sis
 data
 test
+.PHPMailer
+.catalogold
+
+# System Files
+.DS_Store
+Thumbs.db
+
