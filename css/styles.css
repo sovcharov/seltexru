@@ -35,8 +35,8 @@ h6 {
   src: url(../fonts/bitstreamverabd.ttf);
 }
 
-.my-part-description {
-}
+/* .my-part-description {
+} */
 .my-part-description h1 {
   font-size: 20px;
 }
@@ -49,8 +49,8 @@ h6 {
 }
 
 .my-part-image {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
 }
 
 .my-navbar {
@@ -97,9 +97,9 @@ h6 {
     background-color: #ffcc01;
 }
 
-.my-search-button:hover {
+/* .my-search-button:hover {
 /*    background-color: #F2C20E;*/
-}
+} */
 
 .navbar-inverse .navbar-brand {
     font-size: 48px;
@@ -237,7 +237,7 @@ a:hover.contact-button {
 
 .input-group .textbox::-webkit-input-placeholder {
     color:blue;
-    font-weight: ;
+    /* font-weight: ; */
     -webkit-animation-name: blinker;
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: linear;
