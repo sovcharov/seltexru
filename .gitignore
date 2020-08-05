@@ -3,6 +3,7 @@ data
 test
 .PHPMailer
 .catalogold
+img/db
 
 # System Files
 .DS_Store
