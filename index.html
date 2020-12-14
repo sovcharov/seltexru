@@ -468,7 +468,8 @@
             var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
             s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-            x.style.marginBottom = "150px"
+            var y = document.getElementById('gb-widget-4072');
+            y.style.marginBottom = "150px";
         })();
     </script>
     <!-- /GetButton.io widget -->
