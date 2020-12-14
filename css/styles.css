@@ -315,8 +315,8 @@ a:hover.contact-button {
 }
 
 .whatsapp {
-    width: 40px; 
-    height: 40px;
+    width: 52px; 
+    height: 52px;
     order: 1;
     padding: 5px;
     box-sizing: border-box;
@@ -347,6 +347,28 @@ a:hover.contact-button {
   animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   animation-delay: 0.16s;
   animation-fill-mode: backwards;
+  animation-name: ijMbJr;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  margin: auto auto auto 10px;
+  max-width: 155px;
+  max-height: 44px;
+  display: flex;
+  order: 2;
+  text-decoration: none !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.whatsapp3-2 {
+  transform: translateX(0px);
+  position: relative;
+  animation-duration: 0.64s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 0.16s;
+  animation-fill-mode: backwards;
   animation-name: jTSRH;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
   border: 1px solid rgb(226, 226, 226);
@@ -369,25 +391,4 @@ a:hover.contact-button {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   margin: auto;
-}
-.whatsapp3-2 {
-  transform: translateX(0px);
-  position: relative;
-  animation-duration: 0.64s;
-  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  animation-delay: 0.16s;
-  animation-fill-mode: backwards;
-  animation-name: ijMbJr;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
-  border: 1px solid rgb(226, 226, 226);
-  border-radius: 5px;
-  background: white;
-  cursor: pointer;
-  margin: auto auto auto 10px;
-  max-width: 155px;
-  max-height: 44px;
-  display: flex;
-  order: 2;
-  text-decoration: none !important;
-  color: rgb(0, 0, 0) !important;
 }
