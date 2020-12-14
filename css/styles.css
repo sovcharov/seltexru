@@ -313,3 +313,81 @@ a:hover.contact-button {
     2px -1px 0 #000,
     -2px -1px 0 #000;
 }
+
+.whatsapp {
+    width: 40px; 
+    height: 40px;
+    order: 1;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 6px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    z-index: 200;
+    display: block;
+    border: 0px;
+    background: rgb(77, 194, 71) !important;
+}
+
+.whatsapp2 {
+    display: flex;
+    margin-top: 14px;
+    position: relative;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.whatsapp3 {
+  transform: translateX(0px);
+  position: relative;
+  animation-duration: 0.64s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 0.16s;
+  animation-fill-mode: backwards;
+  animation-name: jTSRH;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  margin: auto 10px auto auto;
+  max-width: 155px;
+  max-height: 44px;
+  display: flex;
+  order: 1;
+  text-decoration: none !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.whatsapp4 {
+  text-align: center;
+  padding: 7px 10px;
+  line-height: 14px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  margin: auto;
+}
+.whatsapp3-2 {
+  transform: translateX(0px);
+  position: relative;
+  animation-duration: 0.64s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 0.16s;
+  animation-fill-mode: backwards;
+  animation-name: ijMbJr;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  margin: auto auto auto 10px;
+  max-width: 155px;
+  max-height: 44px;
+  display: flex;
+  order: 2;
+  text-decoration: none !important;
+  color: rgb(0, 0, 0) !important;
+}
