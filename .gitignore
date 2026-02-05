@@ -1,11 +1,18 @@
 #data folder created from sis
 data
 test
+files
+sitemap.xml
 .PHPMailer
 .catalogold
 img/db
 
+
+
 # System Files
 .DS_Store
 Thumbs.db
+
+#Sergei's files:
+
 
