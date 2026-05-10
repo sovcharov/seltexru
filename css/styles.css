@@ -329,7 +329,7 @@ a:hover.contact-button {
     z-index: 200;
     display: block;
     border: 0px;
-    background: rgb(77, 194, 71) !important;
+    /* background: rgb(77, 194, 71) !important; */
 }
 
 .whatsapp2 {
